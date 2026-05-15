@@ -1,5 +1,13 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: "Eagle Horizon";
+  src: url("/fonts/EagleHorizonP.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -11,8 +19,12 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --font-cursive: var(--font-great-vibes);
-  --font-heading: var(--font-montserrat);
+  --font-heading: "Eagle Horizon", var(--font-montserrat);
   --font-serif: var(--font-playfair);
+}
+
+.font-heading {
+  font-family: "Eagle Horizon", var(--font-montserrat), sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -36,4 +48,19 @@ body {
 
 @utility animate-shimmer {
   animation: shimmer 1.5s infinite;
+}
+
+@keyframes heroFadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-reveal {
+  animation: heroFadeInUp 0.8s ease forwards;
 }
