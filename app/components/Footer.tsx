@@ -6,10 +6,10 @@ export default function Footer() {
   return (
     <footer className="relative bg-[#0a0a0a] pt-24 pb-8 overflow-hidden border-t border-white/5">
       <div className="max-w-7xl mx-auto px-6 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-16 md:mb-20">
           
           {/* Brand Column */}
-          <div className="flex flex-col gap-6">
+          <div className="flex flex-col items-center sm:items-start text-center sm:text-left gap-6">
             <h2 className="text-3xl font-black italic tracking-tighter">
               <span className="text-white">VIVA</span>
               <span className="text-[#cc0000]">PIZZERIA</span>
@@ -37,9 +37,9 @@ export default function Footer() {
           </div>
 
           {/* Location Column */}
-          <div>
+          <div className="flex flex-col items-center sm:items-start text-center sm:text-left">
             <h4 className="text-white text-xs font-bold tracking-[0.3em] uppercase mb-8">Location</h4>
-            <div className="flex gap-4 text-gray-400">
+            <div className="flex flex-col sm:flex-row gap-4 text-gray-400 items-center sm:items-start">
               <MapPin className="text-[#cc0000] shrink-0" size={20} />
               <p className="text-sm leading-relaxed">
                 158 O'Connor Dr.<br />
@@ -49,14 +49,14 @@ export default function Footer() {
           </div>
 
           {/* Contact Column */}
-          <div>
+          <div className="flex flex-col items-center sm:items-start text-center sm:text-left">
             <h4 className="text-white text-xs font-bold tracking-[0.3em] uppercase mb-8">Contact</h4>
             <div className="flex flex-col gap-6 text-gray-400">
-              <div className="flex gap-4 items-center">
+              <div className="flex gap-4 items-center justify-center sm:justify-start">
                 <Phone className="text-[#cc0000]" size={18} />
                 <p className="text-sm">416-282-6886</p>
               </div>
-              <div className="flex gap-4 items-center">
+              <div className="flex gap-4 items-center justify-center sm:justify-start">
                 <Mail className="text-[#cc0000]" size={18} />
                 <p className="text-sm">info@vivapizza.ca</p>
               </div>
@@ -64,9 +64,9 @@ export default function Footer() {
           </div>
 
           {/* Hours Column */}
-          <div>
+          <div className="flex flex-col items-center sm:items-start text-center sm:text-left w-full">
             <h4 className="text-white text-xs font-bold tracking-[0.3em] uppercase mb-8">Hours</h4>
-            <div className="flex flex-col gap-3 text-sm">
+            <div className="flex flex-col gap-3 text-sm w-full max-w-[240px] sm:max-w-none mx-auto sm:mx-0">
               <div className="flex justify-between border-b border-white/5 pb-2">
                 <span className="text-gray-400">Mon</span>
                 <span className="text-white font-medium">Closed</span>
@@ -84,23 +84,23 @@ export default function Footer() {
         </div>
 
         {/* Action Bar */}
-        <div className="border-t border-white/10 py-10 flex flex-col md:flex-row items-center justify-between gap-8">
+        <div className="border-t border-white/10 py-10 flex flex-col lg:flex-row items-center justify-between gap-8 text-center lg:text-left">
           <button className="text-[#cc0000] text-sm font-bold tracking-[0.2em] uppercase flex items-center gap-2 group">
             Order Now <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
           </button>
 
-          <div className="flex flex-wrap items-center gap-6 md:gap-10">
+          <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-6 md:gap-10">
             <span className="text-white text-[10px] font-bold tracking-widest uppercase opacity-60">Order Pickup:</span>
-            <div className="flex items-center gap-8">
-              <span className="text-[#06C167] font-black text-lg tracking-tighter italic">Uber <span className="not-italic">Eats</span></span>
-              <span className="text-[#FF3008] font-black text-lg tracking-tighter uppercase">Doordash</span>
-              <span className="text-[#FF8200] font-black text-lg tracking-tighter uppercase">Skip<span className="text-xs normal-case align-top font-bold">The Dishes</span></span>
+            <div className="flex flex-wrap items-center justify-center gap-6 sm:gap-8">
+              <span className="text-[#06C167] font-black text-base sm:text-lg tracking-tighter italic">Uber <span className="not-italic">Eats</span></span>
+              <span className="text-[#FF3008] font-black text-base sm:text-lg tracking-tighter uppercase">Doordash</span>
+              <span className="text-[#FF8200] font-black text-base sm:text-lg tracking-tighter uppercase">Skip<span className="text-[10px] normal-case align-top font-bold">The Dishes</span></span>
             </div>
           </div>
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-white/5 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="border-t border-white/5 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
           <p className="text-gray-600 text-[10px] tracking-wider uppercase">
             © 2025 Viva Pizzeria. All rights reserved.
           </p>

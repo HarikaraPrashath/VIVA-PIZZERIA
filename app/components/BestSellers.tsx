@@ -43,22 +43,21 @@ export default function BestSellers() {
     <section className="py-24 bg-white overflow-hidden relative">
       <div className="max-w-7xl mx-auto px-4">
         {/* Title Section */}
-        <div className="text-center mb-24 relative flex flex-col items-center">
-          <h2 className="text-5xl md:text-7xl font-serif text-[#1a1a1a] mb-2  tracking-tight drop-shadow-sm">
-            Our Best Seller <span className="font-cursive text-[#cc0000] normal-case italic translate-y-1 ml-2">Items</span>
+        <div className="text-center mb-16 md:mb-24 relative flex flex-col items-center px-4">
+          <h2 className="text-4xl sm:text-5xl md:text-7xl font-serif text-[#1a1a1a] mb-2 tracking-tight drop-shadow-sm">
+            Our Best Seller <span className="font-cursive text-[#cc0000] normal-case italic block sm:inline translate-y-1 sm:ml-2">Items</span>
           </h2>
-          {/* Small yellow brush accent under title */}
-          <div className="w-48 h-4 mt-2 relative">
+          <div className="w-32 sm:w-48 h-3 sm:h-4 mt-2 relative">
             <div className="absolute inset-0 bg-[#f5a623] opacity-40 blur-[3px] rounded-full transform -rotate-2 scale-x-125"></div>
           </div>
         </div>
 
         {/* Items Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 relative">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-4 relative">
           {BEST_SELLERS.map((item, index) => (
             <div
               key={item.id}
-              className="relative group flex flex-col items-center text-center p-8 transition-all duration-500 min-h-[520px] cursor-pointer"
+              className="relative group flex flex-col items-center text-center p-6 md:p-8 transition-all duration-500 min-h-[480px] md:min-h-[520px] cursor-pointer"
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
             >

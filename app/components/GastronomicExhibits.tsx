@@ -48,16 +48,16 @@ export default function GastronomicExhibits() {
       <div className="max-w-7xl mx-auto px-4">
         {/* Header Section */}
         <div className="text-center mb-16 relative">
-          <p className="text-[#cc0000] text-[11px] font-bold tracking-[0.4em] uppercase mb-4">
+          <p className="text-[#cc0000] text-[11px] font-bold tracking-[0.4em] uppercase mb-4 px-4">
             The Curated Selections
           </p>
-          <h2 className="text-5xl md:text-7xl font-serif text-white flex items-center justify-center gap-4">
-            Gastronomic <span className="font-cursive text-[#cc0000] italic normal-case translate-y-2">Exhibits</span>
+          <h2 className="text-4xl sm:text-5xl md:text-7xl font-serif text-white flex flex-col sm:flex-row items-center justify-center gap-2 md:gap-4 px-4">
+            Gastronomic <span className="font-cursive text-[#cc0000] italic normal-case translate-y-0 sm:translate-y-2">Exhibits</span>
           </h2>
         </div>
 
         {/* Category Selector */}
-        <div className="flex justify-center items-center gap-8 md:gap-16 mb-20">
+        <div className="flex justify-start sm:justify-center items-center gap-6 md:gap-16 mb-16 md:mb-20 overflow-x-auto no-scrollbar pb-4 px-4 scroll-smooth">
           {CATEGORIES.map((cat) => {
             const Icon = cat.icon;
             const isActive = activeCategory === cat.id;

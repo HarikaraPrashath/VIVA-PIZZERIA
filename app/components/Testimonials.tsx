@@ -32,21 +32,21 @@ export default function Testimonials() {
     <section className="py-24 bg-white overflow-hidden relative">
       <div className="max-w-7xl mx-auto px-4">
         {/* Header Section */}
-        <div className="text-center mb-16 relative flex flex-col items-center">
+        <div className="text-center mb-16 md:mb-20 relative flex flex-col items-center px-4">
           <p className="text-[#cc0000] text-[11px] font-bold tracking-[0.4em] uppercase mb-4">
             Guest Experiences
           </p>
-          <h2 className="text-5xl md:text-7xl font-serif text-[#1a1a1a] mb-2 tracking-tight drop-shadow-sm">
-            What They <span className="font-cursive text-[#cc0000] normal-case italic translate-y-1 ml-2">Say</span>
+          <h2 className="text-4xl sm:text-5xl md:text-7xl font-serif text-[#1a1a1a] mb-2 tracking-tight drop-shadow-sm">
+            What They <span className="font-cursive text-[#cc0000] normal-case italic block sm:inline translate-y-1 sm:ml-2">Say</span>
           </h2>
         </div>
 
         {/* Asymmetrical Grid Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 min-h-[600px]">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:min-h-[600px]">
           
           {/* Main Large Card (Left) */}
           <motion.div 
-            className="lg:col-span-7 bg-[#cc0000] rounded-3xl p-10 md:p-16 relative overflow-hidden flex flex-col justify-between shadow-2xl group"
+            className="lg:col-span-7 bg-[#cc0000] rounded-3xl p-8 sm:p-10 md:p-16 relative overflow-hidden flex flex-col justify-between shadow-2xl group"
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}

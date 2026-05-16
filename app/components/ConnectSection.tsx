@@ -50,12 +50,12 @@ export default function ConnectAndSubscribe() {
       <div className="max-w-7xl mx-auto px-4">
         
         {/* Connect Header */}
-        <div className="text-center mb-16 relative flex flex-col items-center">
+        <div className="text-center mb-12 md:mb-16 relative flex flex-col items-center px-4">
           <p className="text-[#cc0000] text-[11px] font-bold tracking-[0.4em] uppercase mb-4">
             Join Our Community
           </p>
-          <h2 className="text-5xl md:text-7xl font-serif text-white mb-2 tracking-tight">
-            Connect With <span className="font-cursive text-[#cc0000] normal-case italic ml-2">Us</span>
+          <h2 className="text-4xl sm:text-5xl md:text-7xl font-serif text-white mb-2 tracking-tight">
+            Connect With <span className="font-cursive text-[#cc0000] normal-case italic block sm:inline ml-0 sm:ml-2">Us</span>
           </h2>
         </div>
 

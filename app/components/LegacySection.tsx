@@ -48,20 +48,20 @@ export default function LegacySection() {
               Heritage & Passion
             </p>
 
-            <h2 className="text-5xl md:text-7xl font-serif text-white mb-8 leading-[1.1]">
+            <h2 className="text-4xl sm:text-5xl md:text-7xl font-serif text-white mb-8 leading-[1.1]">
               Legacy Born <br />
               from <span className="font-cursive text-[#cc0000] normal-case italic">Passion.</span>
             </h2>
 
-            <p className="text-gray-400 text-base md:text-lg italic font-serif leading-relaxed mb-12 max-w-xl">
+            <p className="text-gray-400 text-sm sm:text-base md:text-lg italic font-serif leading-relaxed mb-12 max-w-xl">
               "Since 1994, our ovens have never gone cold. We believe that true Neapolitan pizza is not just food—it's a dialogue between the ingredients, the fire, and the hands that knead the dough."
             </p>
 
             {/* Stats Grid */}
-            <div className="grid grid-cols-2 gap-y-12 gap-x-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-10 sm:gap-y-12 gap-x-8">
               {STATS.map((stat) => (
-                <div key={stat.id} className="flex flex-col">
-                  <h3 className="text-4xl md:text-5xl font-bebas text-[#cc0000] mb-2 tracking-wider">
+                <div key={stat.id} className="flex flex-col items-center sm:items-start text-center sm:text-left">
+                  <h3 className="text-4xl sm:text-5xl font-bebas text-[#cc0000] mb-2 tracking-wider">
                     {stat.value}
                   </h3>
                   <p className="text-white text-[9px] font-black tracking-[0.2em] uppercase max-w-[140px] leading-relaxed">
