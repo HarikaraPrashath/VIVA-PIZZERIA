@@ -13,7 +13,7 @@
   --foreground: #171717;
 }
 
-@theme inline {
+@theme {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
@@ -21,11 +21,11 @@
   --font-cursive: var(--font-great-vibes);
   --font-heading: "Eagle Horizon", var(--font-montserrat);
   --font-serif: var(--font-playfair);
+  --font-brush: var(--font-permanent-marker);
+  --font-bebas: var(--font-bebas-neue);
+  --font-finger: var(--font-finger-paint);
 }
 
-.font-heading {
-  font-family: "Eagle Horizon", var(--font-montserrat), sans-serif;
-}
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -63,4 +63,21 @@ body {
 
 .hero-reveal {
   animation: heroFadeInUp 0.8s ease forwards;
+}
+
+/* FONT OVERRIDES */
+.font-bebas {
+  font-family: var(--font-bebas-neue), sans-serif !important;
+}
+
+.font-finger {
+  font-family: var(--font-finger-paint), cursive !important;
+}
+
+.font-brush {
+  font-family: var(--font-permanent-marker), cursive !important;
+}
+
+.font-heading {
+  font-family: "Eagle Horizon", var(--font-montserrat), sans-serif !important;
 }

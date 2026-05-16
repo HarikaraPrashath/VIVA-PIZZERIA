@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Great_Vibes, Montserrat, Playfair_Display } from "next/font/google";
+import { Geist, Geist_Mono, Great_Vibes, Montserrat, Playfair_Display, Permanent_Marker, Bebas_Neue, Finger_Paint } from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -28,6 +28,24 @@ const playfair = Playfair_Display({
   subsets: ["latin"],
 });
 
+const permanentMarker = Permanent_Marker({
+  weight: "400",
+  variable: "--font-permanent-marker",
+  subsets: ["latin"],
+});
+
+const bebasNeue = Bebas_Neue({
+  weight: "400",
+  variable: "--font-bebas-neue",
+  subsets: ["latin"],
+});
+
+const fingerPaint = Finger_Paint({
+  weight: "400",
+  variable: "--font-finger-paint",
+  subsets: ["latin"],
+});
+
 export const metadata: Metadata = {
   title: "Pizza Website",
   description: "The Art of Fire",
@@ -41,9 +59,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} ${greatVibes.variable} ${montserrat.variable} ${playfair.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} ${greatVibes.variable} ${montserrat.variable} ${playfair.variable} ${permanentMarker.variable} ${bebasNeue.variable} ${fingerPaint.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className={`${bebasNeue.variable} ${fingerPaint.variable} min-h-full flex flex-col`}>{children}</body>
     </html>
   );
 }

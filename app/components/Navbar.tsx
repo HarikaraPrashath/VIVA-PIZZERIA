@@ -9,15 +9,24 @@ interface NavbarProps {
 
 export default function Navbar({ isAnimatedIn }: NavbarProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  React.useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
     <>
       <nav
-        className={`fixed top-0 left-0 w-full z-50 flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-32 py-4 md:py-6 transition-all duration-1000 ${
+        className={`fixed top-0 left-0 w-full z-50 flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-32 py-4 md:py-6 transition-all duration-500 ${
           isAnimatedIn
             ? "opacity-100 translate-y-0"
             : "opacity-0 -translate-y-10 pointer-events-none"
-        }`}
+        } ${isScrolled ? "bg-black/80 backdrop-blur-md shadow-lg py-3 md:py-4" : "bg-transparent"}`}
       >
         {/* Mobile Left: Logo */}
         <Link href="/" className="font-serif font-black text-xl sm:text-3xl lg:text-4xl tracking-tighter cursor-pointer flex-shrink-0">
