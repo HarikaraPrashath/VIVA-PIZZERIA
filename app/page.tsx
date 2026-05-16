@@ -6,6 +6,10 @@ import Navbar from "./components/Navbar";
 import BestSellers from "./components/BestSellers";
 import GastronomicExhibits from "./components/GastronomicExhibits";
 import OurServices from "./components/OurServices";
+import LegacySection from "./components/LegacySection";
+import Testimonials from "./components/Testimonials";
+import ConnectSection from "./components/ConnectSection";
+import Footer from "./components/Footer";
 
 export default function Home() {
   const [isVideoEnded, setIsVideoEnded] = useState(false);
@@ -13,7 +17,34 @@ export default function Home() {
 
   useEffect(() => {
     setIsMounted(true);
+    
+    // Disable browser's automatic scroll restoration
+    if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'manual';
+    }
+
+    // Force scroll to top with a slight delay to ensure it catches after browser initialization
+    const timer = setTimeout(() => {
+      window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+    }, 0);
+
+    return () => clearTimeout(timer);
   }, []);
+
+  useEffect(() => {
+    if (!isMounted) return;
+
+    // Lock scroll when video is playing
+    if (!isVideoEnded) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+    
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [isVideoEnded, isMounted]);
 
   return (
     <main className="relative w-full bg-white font-sans">
@@ -22,8 +53,6 @@ export default function Home() {
 
       {/* 1. HERO SECTION */}
       <section className="relative w-full h-screen bg-black overflow-hidden">
-        {/* ... Hero content ... */}
-        {/* (Simplified for the edit, but will keep the logic) */}
         <video
           src="/Hero Video.mp4"
           className="absolute inset-0 w-full h-full object-cover"
@@ -32,7 +61,7 @@ export default function Home() {
           playsInline
           onEnded={() => setIsVideoEnded(true)}
         />
-        {/* ... Rest of the hero ... */}
+        
         <div
           className={`absolute inset-0 z-10 mix-blend-multiply pointer-events-none transition-opacity duration-1000 ${
             isVideoEnded ? "opacity-0" : "opacity-100"
@@ -56,17 +85,14 @@ export default function Home() {
         {/* Solid Content Layer */}
         <div className="absolute inset-0 z-30 flex flex-col justify-center h-full px-8 md:px-16 lg:px-32 pointer-events-none">
           <div className="pointer-events-auto max-w-2xl">
-            {/* Top small text */}
             <p
               className={`text-xs md:text-sm font-semibold tracking-[0.2em] mb-12 text-white transition-opacity duration-700 ${
                 isVideoEnded ? "opacity-100" : "opacity-0 hero-reveal"
               }`}
-              style={!isVideoEnded ? { animationDelay: "2s" } : undefined}
             >
               Since 1994 &bull; Crafted with Passion
             </p>
 
-            {/* Text Container */}
             <div className="relative">
               <div
                 className={`absolute top-0 left-0 transition-opacity duration-1000 ${
@@ -82,22 +108,18 @@ export default function Home() {
               <div className="h-[200px] md:h-[280px]"></div>
             </div>
 
-            {/* Quote */}
             <p
               className={`text-sm md:text-base italic mt-8 mb-10 max-w-lg text-gray-200 transition-opacity duration-700 ${
                 isVideoEnded ? "opacity-100" : "opacity-0 hero-reveal"
               }`}
-              style={!isVideoEnded ? { animationDelay: "3s" } : undefined}
             >
               "Mastering the alchemy of wood-fired flames and hand-kneaded tradition since 1994."
             </p>
 
-            {/* Buttons */}
             <div
               className={`flex flex-wrap gap-8 items-center mt-4 transition-opacity duration-700 ${
                 isVideoEnded ? "opacity-100" : "opacity-0 hero-reveal"
               }`}
-              style={!isVideoEnded ? { animationDelay: "4s" } : undefined}
             >
               <button className="bg-[#cc0000] hover:bg-red-700 text-white text-xs md:text-sm font-bold py-3.5 px-8 rounded-full transition-colors uppercase tracking-widest">
                 ORDER NOW
@@ -118,6 +140,18 @@ export default function Home() {
 
       {/* 4. OUR SERVICES SECTION */}
       <OurServices />
+
+      {/* 5. LEGACY SECTION */}
+      <LegacySection />
+
+      {/* 6. TESTIMONIALS SECTION */}
+      <Testimonials />
+
+      {/* 7. CONNECT & SUBSCRIBE SECTION */}
+      <ConnectSection />
+
+      {/* 8. FOOTER SECTION */}
+      <Footer />
     </main>
   );
 }
