@@ -17,7 +17,7 @@ export default function Home() {
 
   useEffect(() => {
     setIsMounted(true);
-
+``
     // Disable browser's automatic scroll restoration
     if ('scrollRestoration' in history) {
       history.scrollRestoration = 'manual';
