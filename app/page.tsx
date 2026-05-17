@@ -17,7 +17,7 @@ export default function Home() {
 
   useEffect(() => {
     setIsMounted(true);
-    
+
     // Disable browser's automatic scroll restoration
     if ('scrollRestoration' in history) {
       history.scrollRestoration = 'manual';
@@ -40,7 +40,7 @@ export default function Home() {
     } else {
       document.body.style.overflow = "auto";
     }
-    
+
     return () => {
       document.body.style.overflow = "auto";
     };
@@ -61,23 +61,30 @@ export default function Home() {
           playsInline
           onEnded={() => setIsVideoEnded(true)}
         />
-        
+
         <div
-          className={`absolute inset-0 z-10 mix-blend-multiply pointer-events-none transition-opacity duration-1000 ${
-            isVideoEnded ? "opacity-0" : "opacity-100"
-          }`}
+          className={`absolute inset-0 z-10 mix-blend-multiply pointer-events-none transition-opacity duration-1000 ${isVideoEnded ? "opacity-0" : "opacity-100"
+            }`}
           style={{
             background: "linear-gradient(to right, black 0%, black 45%, white 75%, white 100%)",
           }}
         >
-          <div className="flex flex-col justify-start h-full px-1 md:px-16 lg:px-32 pt-20 md:pt-28">
-            <div className="h-4 md:h-6 mb-30"></div>
+          <div className="flex flex-col justify-center h-full px-8 md:px-16 lg:px-32">
             <div className="max-w-2xl">
-              <h1 className="text-6xl md:text-8xl font-heading leading-none capitalize pr-8">
-                <span className="text-white block mb-4">The Art</span>
-                <span className="text-white ml-12">Of </span>
-                <span className="text-[#cc0000]">Fire</span>
-              </h1>
+              <p className="text-xs md:text-sm font-semibold tracking-[0.2em] mb-12 text-transparent select-none">
+                Since 1994 &bull; Crafted with Passion
+              </p>
+
+              <div className="relative">
+                <div className="absolute  -top-20 left-0">
+                  <h1 className="text-7xl md:text-9xl font-heading leading-none capitalize pr-8">
+                    <span className="text-white block mb-4">The Art</span>
+                    <span className="text-white ml-12">Of </span>
+                    <span className="text-[#cc0000]">Fire</span>
+                  </h1>
+                </div>
+                <div className="h-[200px] md:h-[280px]"></div>
+              </div>
             </div>
           </div>
         </div>
@@ -86,18 +93,16 @@ export default function Home() {
         <div className="absolute inset-0 z-30 flex flex-col justify-center h-full px-8 md:px-16 lg:px-32 pointer-events-none">
           <div className="pointer-events-auto max-w-2xl">
             <p
-              className={`text-xs md:text-sm font-semibold tracking-[0.2em] mb-12 text-white transition-opacity duration-700 ${
-                isVideoEnded ? "opacity-100" : "opacity-0 hero-reveal"
-              }`}
+              className={`text-xs md:text-sm font-semibold tracking-[0.2em] mb-12 text-white transition-opacity duration-700 ${isVideoEnded ? "opacity-100" : "opacity-0 hero-reveal"
+                }`}
             >
               Since 1994 &bull; Crafted with Passion
             </p>
 
             <div className="relative">
               <div
-                className={`absolute top-0 left-0 transition-opacity duration-1000 ${
-                  isVideoEnded ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
-                }`}
+                className={`absolute top-0 left-0 transition-opacity duration-1000 ${isVideoEnded ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+                  }`}
               >
                 <h1 className="text-7xl md:text-9xl font-heading leading-none capitalize pr-8">
                   <span className="text-white block mb-4">The Art</span>
@@ -109,17 +114,15 @@ export default function Home() {
             </div>
 
             <p
-              className={`text-sm md:text-base italic mt-8 mb-10 max-w-lg text-gray-200 transition-opacity duration-700 ${
-                isVideoEnded ? "opacity-100" : "opacity-0 hero-reveal"
-              }`}
+              className={`text-sm md:text-base italic mt-8 mb-10 max-w-lg text-gray-200 transition-opacity duration-700 ${isVideoEnded ? "opacity-100" : "opacity-0 hero-reveal"
+                }`}
             >
               "Mastering the alchemy of wood-fired flames and hand-kneaded tradition since 1994."
             </p>
 
             <div
-              className={`flex flex-wrap gap-8 items-center mt-4 transition-opacity duration-700 ${
-                isVideoEnded ? "opacity-100" : "opacity-0 hero-reveal"
-              }`}
+              className={`flex flex-wrap gap-8 items-center mt-4 transition-opacity duration-700 ${isVideoEnded ? "opacity-100" : "opacity-0 hero-reveal"
+                }`}
             >
               <button className="bg-[#cc0000] hover:bg-red-700 text-white text-xs md:text-sm font-bold py-3.5 px-8 rounded-full transition-colors uppercase tracking-widest">
                 ORDER NOW
