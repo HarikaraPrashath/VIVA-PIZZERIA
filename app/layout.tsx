@@ -59,7 +59,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} ${greatVibes.variable} ${montserrat.variable} ${playfair.variable} ${permanentMarker.variable} ${bebasNeue.variable} ${fingerPaint.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} ${greatVibes.variable} ${montserrat.variable} ${playfair.variable} ${permanentMarker.variable} ${bebasNeue.variable} ${fingerPaint.variable} h-full antialiased scroll-smooth`}
     >
       <body className={`${bebasNeue.variable} ${fingerPaint.variable} min-h-full flex flex-col`}>{children}</body>
     </html>

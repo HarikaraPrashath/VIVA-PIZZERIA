@@ -12,7 +12,7 @@ const STATS = [
 
 export default function LegacySection() {
   return (
-    <section className="py-24 bg-black overflow-hidden relative border-t border-white/5">
+    <section id="our-story" className="py-24 bg-black overflow-hidden relative border-t border-white/5">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
 

@@ -3,6 +3,14 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 
+const NAV_ITEMS = [
+  { name: "Best Sellers", href: "/#best-sellers" },
+  { name: "Menu", href: "/menu" },
+  { name: "The Gallery", href: "/#gallery" },
+  { name: "Services", href: "/#services" },
+  { name: "Our Story", href: "/#our-story" },
+];
+
 interface NavbarProps {
   isAnimatedIn: boolean;
 }
@@ -22,11 +30,10 @@ export default function Navbar({ isAnimatedIn }: NavbarProps) {
   return (
     <>
       <nav
-        className={`fixed top-0 left-0 w-full z-50 flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-32 py-4 md:py-6 transition-all duration-500 ${
-          isAnimatedIn
+        className={`fixed top-0 left-0 w-full z-50 flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-32 py-4 md:py-6 transition-all duration-500 ${isAnimatedIn
             ? "opacity-100 translate-y-0"
             : "opacity-0 -translate-y-10 pointer-events-none"
-        } ${isScrolled ? "bg-black/80 backdrop-blur-md shadow-lg py-3 md:py-4" : "bg-transparent"}`}
+          } ${isScrolled ? "bg-black/80 backdrop-blur-md shadow-lg py-3 md:py-4" : "bg-transparent"}`}
       >
         {/* Mobile Left: Logo */}
         <Link href="/" className="font-serif font-black text-xl sm:text-3xl lg:text-4xl tracking-tighter cursor-pointer flex-shrink-0">
@@ -36,13 +43,13 @@ export default function Navbar({ isAnimatedIn }: NavbarProps) {
 
         {/* Desktop Links */}
         <div className="hidden xl:flex items-center gap-8">
-          {["Best Sellers", "The Gallery", "Services", "Blog", "Our Story"].map((item) => (
+          {NAV_ITEMS.map((item) => (
             <Link
-              key={item}
-              href="#"
+              key={item.name}
+              href={item.href}
               className="text-white/80 hover:text-white text-sm font-semibold tracking-wider uppercase transition-colors relative group"
             >
-              {item}
+              {item.name}
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#cc0000] transition-all duration-300 group-hover:w-full"></span>
             </Link>
           ))}
@@ -56,7 +63,7 @@ export default function Navbar({ isAnimatedIn }: NavbarProps) {
             md:py-3 md:px-8 md:text-sm md:block md:leading-normal"
           >
             <span className="relative z-10 transition-colors duration-500 group-hover:text-white md:hidden">
-              <span>RESERVE A</span><br/><span>TABLE</span>
+              <span>RESERVE A</span><br /><span>TABLE</span>
             </span>
             <span className="relative z-10 transition-colors duration-500 group-hover:text-white hidden md:inline">
               Reserve a Table
@@ -68,7 +75,7 @@ export default function Navbar({ isAnimatedIn }: NavbarProps) {
           </button>
 
           {/* Hamburger Icon */}
-          <button 
+          <button
             className="xl:hidden text-white focus:outline-none transition-transform hover:scale-110"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
@@ -84,25 +91,24 @@ export default function Navbar({ isAnimatedIn }: NavbarProps) {
       </nav>
 
       {/* Mobile Menu Overlay */}
-      <div 
-        className={`fixed inset-0 z-40 bg-black/98 backdrop-blur-md flex flex-col items-center justify-center transition-all duration-500 xl:hidden ${
-          isMobileMenuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
-        }`}
+      <div
+        className={`fixed inset-0 z-40 bg-black/98 backdrop-blur-md flex flex-col items-center justify-center transition-all duration-500 xl:hidden ${isMobileMenuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+          }`}
       >
         <div className="flex flex-col items-center gap-8 w-full px-6">
-          {["Best Sellers", "The Gallery", "Services", "Blog", "Our Story"].map((item, index) => (
+          {NAV_ITEMS.map((item, index) => (
             <Link
-              key={item}
-              href="#"
+              key={item.name}
+              href={item.href}
               onClick={() => setIsMobileMenuOpen(false)}
               className="text-white text-2xl sm:text-3xl font-bold tracking-widest uppercase hover:text-[#cc0000] transition-colors relative group"
-              style={{ 
+              style={{
                 transitionDelay: isMobileMenuOpen ? `${index * 50 + 100}ms` : '0ms',
                 transform: isMobileMenuOpen ? 'translateY(0)' : 'translateY(20px)',
                 opacity: isMobileMenuOpen ? 1 : 0
               }}
             >
-              {item}
+              {item.name}
               <span className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-0 h-1 bg-[#cc0000] transition-all duration-300 group-hover:w-1/2"></span>
             </Link>
           ))}

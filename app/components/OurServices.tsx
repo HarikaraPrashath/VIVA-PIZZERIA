@@ -46,7 +46,7 @@ export default function OurServices() {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <section className="py-24 bg-white overflow-hidden relative">
+    <section id="services" className="py-24 bg-white overflow-hidden relative">
       <div className="max-w-7xl mx-auto px-4">
         {/* Header Section */}
         <div className="text-center mb-16 md:mb-20 relative flex flex-col items-center px-4">

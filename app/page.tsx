@@ -11,24 +11,29 @@ import Testimonials from "./components/Testimonials";
 import ConnectSection from "./components/ConnectSection";
 import Footer from "./components/Footer";
 
+// Keep track of whether the cinematic video intro has already played in the current browser session
+let globalHasVideoPlayed = false;
+
 export default function Home() {
-  const [isVideoEnded, setIsVideoEnded] = useState(false);
+  const [isVideoEnded, setIsVideoEnded] = useState(globalHasVideoPlayed);
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
     setIsMounted(true);
-``
-    // Disable browser's automatic scroll restoration
-    if ('scrollRestoration' in history) {
-      history.scrollRestoration = 'manual';
+    
+    // Only force scroll-to-top and manual restoration on first load/browser refresh.
+    // Skip if it is a client-side navigation (in which case, the video already ended).
+    if (!globalHasVideoPlayed) {
+      if ('scrollRestoration' in history) {
+        history.scrollRestoration = 'manual';
+      }
+
+      const timer = setTimeout(() => {
+        window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+      }, 0);
+
+      return () => clearTimeout(timer);
     }
-
-    // Force scroll to top with a slight delay to ensure it catches after browser initialization
-    const timer = setTimeout(() => {
-      window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
-    }, 0);
-
-    return () => clearTimeout(timer);
   }, []);
 
   useEffect(() => {
@@ -46,6 +51,11 @@ export default function Home() {
     };
   }, [isVideoEnded, isMounted]);
 
+  const handleVideoEnded = () => {
+    setIsVideoEnded(true);
+    globalHasVideoPlayed = true;
+  };
+
   return (
     <main className="relative w-full bg-white font-sans">
       {/* Navbar - Fixed at top */}
@@ -59,7 +69,7 @@ export default function Home() {
           autoPlay
           muted
           playsInline
-          onEnded={() => setIsVideoEnded(true)}
+          onEnded={handleVideoEnded}
         />
 
         <div
@@ -141,7 +151,7 @@ export default function Home() {
       {/* 3. GASTRONOMIC EXHIBITS SECTION */}
       <GastronomicExhibits />
 
-      {/* 4. OUR SERVICES SECTION */}
+      {/* 5. OUR SERVICES SECTION */}
       <OurServices />
 
       {/* 5. LEGACY SECTION */}

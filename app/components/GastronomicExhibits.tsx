@@ -44,7 +44,7 @@ export default function GastronomicExhibits() {
   const [hoveredId, setHoveredId] = useState<number | null>(null);
 
   return (
-    <section className="py-24 bg-black overflow-hidden relative border-t border-white/5">
+    <section id="gallery" className="py-24 bg-black overflow-hidden relative border-t border-white/5">
       <div className="max-w-7xl mx-auto px-4">
         {/* Header Section */}
         <div className="text-center mb-16 relative">

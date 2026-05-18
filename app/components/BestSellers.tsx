@@ -40,7 +40,7 @@ export default function BestSellers() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
-    <section className="py-24 bg-white overflow-hidden relative">
+    <section id="best-sellers" className="py-24 bg-white overflow-hidden relative">
       <div className="max-w-7xl mx-auto px-4">
         {/* Title Section */}
         <div className="text-center mb-16 md:mb-24 relative flex flex-col items-center px-4">
