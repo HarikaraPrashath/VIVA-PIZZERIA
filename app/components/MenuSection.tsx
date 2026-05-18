@@ -84,7 +84,7 @@ export default function MenuSection() {
       {/* ---------------- BACKGROUND DECORATIONS (CHALK & LEAVES) ---------------- */}
       <div className="absolute inset-0 pointer-events-none select-none z-0">
         {/* Subtle radial chalkboard lighting */}
-        <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-[#f5a623]/3 opacity-[0.03] blur-[150px] rounded-full"></div>
+        <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-[#cc0000]/3 opacity-[0.03] blur-[150px] rounded-full"></div>
         <div className="absolute bottom-1/3 right-1/4 w-[800px] h-[800px] bg-[#cc0000]/5 opacity-[0.03] blur-[180px] rounded-full"></div>
 
         {/* Chalk drawings on the chalkboard board */}
@@ -104,9 +104,9 @@ export default function MenuSection() {
             A Culinary Masterpiece
           </p>
           <h2 className="text-4xl sm:text-5xl md:text-7xl font-serif text-white flex flex-col sm:flex-row items-center justify-center gap-2 md:gap-4">
-            Discover Our <span className="font-cursive text-[#f5a623] italic normal-case translate-y-1 sm:ml-2">Menu</span>
+            Discover Our <span className="font-cursive text-[#cc0000] italic normal-case translate-y-1 sm:ml-2">Menu</span>
           </h2>
-          <div className="w-32 h-1 bg-gradient-to-r from-transparent via-[#f5a623]/80 to-transparent mx-auto mt-6"></div>
+          <div className="w-32 h-1 bg-gradient-to-r from-transparent via-[#cc0000]/80 to-transparent mx-auto mt-6"></div>
         </div>
 
         {/* ---------------- THE MENU CONTAINER (TWO PAGES) ---------------- */}
@@ -122,13 +122,13 @@ export default function MenuSection() {
           <div className="p-8 sm:p-12 lg:p-16 relative flex flex-col justify-between border-b lg:border-b-0 lg:border-r border-white/5 overflow-hidden bg-[radial-gradient(circle_at_center,_#0b141d_0%,_#070d12_100%)]">
             
             {/* Background design accents */}
-            <div className="absolute top-[20%] left-[-40px] w-64 h-64 rounded-full bg-[#f5a623]/5 blur-3xl pointer-events-none"></div>
+            <div className="absolute top-[20%] left-[-40px] w-64 h-64 rounded-full bg-[#cc0000]/5 blur-3xl pointer-events-none"></div>
             
             {/* Upper Content area */}
             <div>
               {/* Badge: OUR FAVORITE FOOD */}
               <div className="mb-10 flex">
-                <span className="border-2 border-[#f5a623] text-[#f5a623] px-6 py-1.5 rounded-full font-bebas text-sm sm:text-base tracking-[0.2em] uppercase font-bold bg-[#070d12]/50 shadow-[0_0_15px_rgba(245,166,35,0.2)]">
+                <span className="border-2 border-[#cc0000] text-[#cc0000] px-6 py-1.5 rounded-full font-bebas text-sm sm:text-base tracking-[0.2em] uppercase font-bold bg-[#070d12]/50 shadow-[0_0_15px_rgba(204,0,0,0.25)]">
                   Our Favorite Food
                 </span>
               </div>
@@ -138,7 +138,7 @@ export default function MenuSection() {
                 
                 {/* Yellow Circle Plate Container (Left on MD) */}
                 <div className="md:col-span-6 flex justify-center relative">
-                  <div className="w-56 h-56 sm:w-64 sm:h-64 rounded-full bg-[#f5a623] relative flex items-center justify-center shadow-[0_15px_30px_rgba(245,166,35,0.3)]">
+                  <div className="w-56 h-56 sm:w-64 sm:h-64 rounded-full bg-[#cc0000] relative flex items-center justify-center shadow-[0_15px_30px_rgba(204,0,0,0.35)]">
                     
                     {/* Delicious Tacos / Wood-fired wrap item overlapping yellow circle */}
                     <div className="absolute w-[95%] h-[95%] rounded-full overflow-hidden hover:scale-105 transition-transform duration-700">
@@ -155,7 +155,7 @@ export default function MenuSection() {
                 <div className="md:col-span-6 flex flex-col gap-6">
                   {/* Food item 1 */}
                   <div>
-                    <h4 className="text-lg sm:text-xl font-bebas tracking-wider text-[#f5a623] hover:text-white transition-colors cursor-pointer">
+                    <h4 className="text-lg sm:text-xl font-bebas tracking-wider text-[#cc0000] hover:text-white transition-colors cursor-pointer">
                       Smoked BBQ Tacos
                     </h4>
                     <p className="text-gray-400 text-[11px] leading-relaxed mt-1 max-w-[280px]">
@@ -165,7 +165,7 @@ export default function MenuSection() {
 
                   {/* Food item 2 */}
                   <div>
-                    <h4 className="text-lg sm:text-xl font-bebas tracking-wider text-[#f5a623] hover:text-white transition-colors cursor-pointer">
+                    <h4 className="text-lg sm:text-xl font-bebas tracking-wider text-[#cc0000] hover:text-white transition-colors cursor-pointer">
                       Truffle Mushroom Wrap
                     </h4>
                     <p className="text-gray-400 text-[11px] leading-relaxed mt-1 max-w-[280px]">
@@ -175,7 +175,7 @@ export default function MenuSection() {
 
                   {/* Food item 3 */}
                   <div>
-                    <h4 className="text-lg sm:text-xl font-bebas tracking-wider text-[#f5a623] hover:text-white transition-colors cursor-pointer">
+                    <h4 className="text-lg sm:text-xl font-bebas tracking-wider text-[#cc0000] hover:text-white transition-colors cursor-pointer">
                       Fire-Roasted Burrito
                     </h4>
                     <p className="text-gray-400 text-[11px] leading-relaxed mt-1 max-w-[280px]">
@@ -200,7 +200,7 @@ export default function MenuSection() {
               {/* Daily Special header */}
               <div className="flex items-center gap-4 text-white/20 mb-4">
                 <div className="w-12 h-[1px] bg-gradient-to-r from-transparent to-white/20"></div>
-                <span className="text-[#f5a623] font-bebas text-sm sm:text-base tracking-[0.4em] uppercase font-bold">Chef's Signature</span>
+                <span className="text-[#cc0000] font-bebas text-sm sm:text-base tracking-[0.4em] uppercase font-bold">Chef's Signature</span>
                 <div className="w-12 h-[1px] bg-gradient-to-l from-transparent to-white/20"></div>
               </div>
               
@@ -212,7 +212,7 @@ export default function MenuSection() {
               {/* Subtle organic wheat badge */}
               <div className="flex items-center gap-2 mt-5 text-gray-500">
                 <span className="text-[10px] font-finger tracking-[0.25em] uppercase">100% Organic Wheat</span>
-                <span className="text-[#f5a623] text-xs">•</span>
+                <span className="text-[#cc0000] text-xs">•</span>
                 <span className="text-[10px] font-finger tracking-[0.25em] uppercase">48h Slow Fermentation</span>
               </div>
             </div>
@@ -223,7 +223,7 @@ export default function MenuSection() {
               {/* QR Code and Contact info (Left on MD) */}
               <div className="md:col-span-5 relative">
                 {/* Yellow background shape */}
-                <div className="absolute -bottom-16 -left-16 w-52 h-52 bg-[#f5a623] rounded-tr-[120px] -z-10 shadow-[0_10px_30px_rgba(245,166,35,0.2)]"></div>
+                <div className="absolute -bottom-16 -left-16 w-52 h-52 bg-[#cc0000] rounded-tr-[120px] -z-10 shadow-[0_10px_30px_rgba(204,0,0,0.25)]"></div>
                 
                 <div className="flex flex-col gap-4 pl-2 pb-2">
                   <div className="w-20 h-20 bg-white p-2.5 rounded-xl shadow-lg border border-gray-100 flex items-center justify-center hover:scale-105 transition-transform duration-300">
@@ -232,7 +232,7 @@ export default function MenuSection() {
 
                   <div className="text-[#070d12] md:text-white mt-1">
                     <p className="text-[10px] md:text-gray-400 font-bold uppercase tracking-wider">Contact Us:</p>
-                    <p className="text-base sm:text-lg font-bebas tracking-wider font-bold text-[#070d12] md:text-[#f5a623]">+123-456-7891</p>
+                    <p className="text-base sm:text-lg font-bebas tracking-wider font-bold text-[#070d12] md:text-[#cc0000]">+123-456-7891</p>
                     <p className="text-[9px] md:text-gray-400 font-medium lowercase tracking-wide -mt-0.5">www.yourwebsite.com</p>
                   </div>
                 </div>
@@ -246,13 +246,13 @@ export default function MenuSection() {
                   <span className="font-finger text-white text-3xl sm:text-4xl block leading-tight font-light drop-shadow-md tracking-wider">
                     Super Food
                   </span>
-                  <span className="font-brush text-[#f5a623] text-6xl sm:text-7xl lg:text-8xl block leading-none tracking-wide -mt-2 drop-shadow-lg">
+                  <span className="font-brush text-[#cc0000] text-6xl sm:text-7xl lg:text-8xl block leading-none tracking-wide -mt-2 drop-shadow-lg">
                     Menu
                   </span>
                 </div>
 
                 {/* Big Chicken Plate with gold ring */}
-                <div className="w-48 h-48 sm:w-56 sm:h-56 rounded-full border-[6px] border-[#f5a623] relative flex items-center justify-center shadow-[0_20px_40px_rgba(0,0,0,0.6)]">
+                <div className="w-48 h-48 sm:w-56 sm:h-56 rounded-full border-[6px] border-[#cc0000] relative flex items-center justify-center shadow-[0_20px_40px_rgba(0,0,0,0.6)]">
                   {/* Delicious Roasted Chicken plate overlapping */}
                   <div className="absolute w-[98%] h-[98%] rounded-full overflow-hidden hover:rotate-[15deg] transition-transform duration-1000">
                     <img
@@ -285,34 +285,34 @@ export default function MenuSection() {
               {/* ---------------- 1. APPETIZER MENU ---------------- */}
               <div>
                 <div className="mb-6 flex">
-                  <span className="border border-[#f5a623]/60 bg-black/40 text-[#f5a623] px-6 py-1 rounded-full font-bebas text-xs sm:text-sm tracking-[0.25em] uppercase font-bold">
+                  <span className="border border-[#cc0000]/60 bg-black/40 text-[#cc0000] px-6 py-1 rounded-full font-bebas text-xs sm:text-sm tracking-[0.25em] uppercase font-bold">
                     Appetizer Menu
                   </span>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
                   <div>
-                    <h5 className="text-base font-bebas tracking-wide text-white hover:text-[#f5a623] transition-colors cursor-pointer">Garlic Dough Knots</h5>
+                    <h5 className="text-base font-bebas tracking-wide text-white hover:text-[#cc0000] transition-colors cursor-pointer">Garlic Dough Knots</h5>
                     <p className="text-gray-400 text-[10px] leading-relaxed mt-1">Oven-baked knots tossed in olive oil, garlic, parmesan & parsley.</p>
                   </div>
                   <div>
-                    <h5 className="text-base font-bebas tracking-wide text-white hover:text-[#f5a623] transition-colors cursor-pointer">Wood-Fired Caprese</h5>
+                    <h5 className="text-base font-bebas tracking-wide text-white hover:text-[#cc0000] transition-colors cursor-pointer">Wood-Fired Caprese</h5>
                     <p className="text-gray-400 text-[10px] leading-relaxed mt-1">Blistered cherry tomatoes, fresh buffalo mozzarella, basil & aged balsamic.</p>
                   </div>
                   <div>
-                    <h5 className="text-base font-bebas tracking-wide text-white hover:text-[#f5a623] transition-colors cursor-pointer">Bruschetta Classica</h5>
+                    <h5 className="text-base font-bebas tracking-wide text-white hover:text-[#cc0000] transition-colors cursor-pointer">Bruschetta Classica</h5>
                     <p className="text-gray-400 text-[10px] leading-relaxed mt-1">Toasted artisan sourdough, vine tomatoes, garlic, basil & olive oil.</p>
                   </div>
                   <div>
-                    <h5 className="text-base font-bebas tracking-wide text-white hover:text-[#f5a623] transition-colors cursor-pointer">Crispy Calamari</h5>
+                    <h5 className="text-base font-bebas tracking-wide text-white hover:text-[#cc0000] transition-colors cursor-pointer">Crispy Calamari</h5>
                     <p className="text-gray-400 text-[10px] leading-relaxed mt-1">Lightly dusted squid rings served with organic house lemon aioli.</p>
                   </div>
                   <div>
-                    <h5 className="text-base font-bebas tracking-wide text-white hover:text-[#f5a623] transition-colors cursor-pointer">Truffle Parm Fries</h5>
+                    <h5 className="text-base font-bebas tracking-wide text-white hover:text-[#cc0000] transition-colors cursor-pointer">Truffle Parm Fries</h5>
                     <p className="text-gray-400 text-[10px] leading-relaxed mt-1">Golden hand-cut potatoes in white truffle oil, grated parmesan & rosemary.</p>
                   </div>
                   <div>
-                    <h5 className="text-base font-bebas tracking-wide text-white hover:text-[#f5a623] transition-colors cursor-pointer">Stuffed Mushrooms</h5>
+                    <h5 className="text-base font-bebas tracking-wide text-white hover:text-[#cc0000] transition-colors cursor-pointer">Stuffed Mushrooms</h5>
                     <p className="text-gray-400 text-[10px] leading-relaxed mt-1">Portobello caps stuffed with goat cheese, wild herbs & wild forest honey.</p>
                   </div>
                 </div>
@@ -321,7 +321,7 @@ export default function MenuSection() {
               {/* ---------------- 2. FAST FOOD ---------------- */}
               <div>
                 <div className="mb-6 flex">
-                  <span className="border border-[#f5a623]/60 bg-black/40 text-[#f5a623] px-6 py-1 rounded-full font-bebas text-xs sm:text-sm tracking-[0.25em] uppercase font-bold">
+                  <span className="border border-[#cc0000]/60 bg-black/40 text-[#cc0000] px-6 py-1 rounded-full font-bebas text-xs sm:text-sm tracking-[0.25em] uppercase font-bold">
                     Fast Food
                   </span>
                 </div>
@@ -330,19 +330,19 @@ export default function MenuSection() {
                   {/* Left: Food Items */}
                   <div className="md:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div>
-                      <h5 className="text-base font-bebas tracking-wide text-white hover:text-[#f5a623] transition-colors cursor-pointer">Viva Double Smash</h5>
+                      <h5 className="text-base font-bebas tracking-wide text-white hover:text-[#cc0000] transition-colors cursor-pointer">Viva Double Smash</h5>
                       <p className="text-gray-400 text-[10px] leading-relaxed mt-1">Two aged smash patties, melted cheddar, pickles & burger sauce on brioche.</p>
                     </div>
                     <div>
-                      <h5 className="text-base font-bebas tracking-wide text-white hover:text-[#f5a623] transition-colors cursor-pointer">Crispy Chicken Burger</h5>
+                      <h5 className="text-base font-bebas tracking-wide text-white hover:text-[#cc0000] transition-colors cursor-pointer">Crispy Chicken Burger</h5>
                       <p className="text-gray-400 text-[10px] leading-relaxed mt-1">Buttermilk fried chicken breast, spicy honey-glaze, lettuce & garlic aioli.</p>
                     </div>
                     <div>
-                      <h5 className="text-base font-bebas tracking-wide text-white hover:text-[#f5a623] transition-colors cursor-pointer">Pepperoni Pizza Roll</h5>
+                      <h5 className="text-base font-bebas tracking-wide text-white hover:text-[#cc0000] transition-colors cursor-pointer">Pepperoni Pizza Roll</h5>
                       <p className="text-gray-400 text-[10px] leading-relaxed mt-1">Hand-stretched dough stuffed with pepperoni, mozzarella & marinara.</p>
                     </div>
                     <div>
-                      <h5 className="text-base font-bebas tracking-wide text-white hover:text-[#f5a623] transition-colors cursor-pointer">Loaded Truffle Fries</h5>
+                      <h5 className="text-base font-bebas tracking-wide text-white hover:text-[#cc0000] transition-colors cursor-pointer">Loaded Truffle Fries</h5>
                       <p className="text-gray-400 text-[10px] leading-relaxed mt-1">Fries loaded with melted mozzarella, crispy bacon, green onion & truffle oil.</p>
                     </div>
                   </div>
@@ -370,7 +370,7 @@ export default function MenuSection() {
               {/* ---------------- 3. MAIN COURSE ---------------- */}
               <div>
                 <div className="mb-6 flex">
-                  <span className="border border-[#f5a623]/60 bg-black/40 text-[#f5a623] px-6 py-1 rounded-full font-bebas text-xs sm:text-sm tracking-[0.25em] uppercase font-bold">
+                  <span className="border border-[#cc0000]/60 bg-black/40 text-[#cc0000] px-6 py-1 rounded-full font-bebas text-xs sm:text-sm tracking-[0.25em] uppercase font-bold">
                     Main Course
                   </span>
                 </div>
@@ -379,27 +379,27 @@ export default function MenuSection() {
                   {/* Items list */}
                   <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
                     <div>
-                      <h5 className="text-base font-bebas tracking-wide text-white hover:text-[#f5a623] transition-colors cursor-pointer">Wood-Fired Ribeye</h5>
+                      <h5 className="text-base font-bebas tracking-wide text-white hover:text-[#cc0000] transition-colors cursor-pointer">Wood-Fired Ribeye</h5>
                       <p className="text-gray-400 text-[10px] leading-relaxed mt-1">12oz dry-aged ribeye steak with rosemary fingerling potatoes & chimichurri.</p>
                     </div>
                     <div>
-                      <h5 className="text-base font-bebas tracking-wide text-white hover:text-[#f5a623] transition-colors cursor-pointer">Truffle Pappardelle</h5>
+                      <h5 className="text-base font-bebas tracking-wide text-white hover:text-[#cc0000] transition-colors cursor-pointer">Truffle Pappardelle</h5>
                       <p className="text-gray-400 text-[10px] leading-relaxed mt-1">Hand-cut pasta, rich wild mushroom truffle cream, shaved pecorino.</p>
                     </div>
                     <div>
-                      <h5 className="text-base font-bebas tracking-wide text-white hover:text-[#f5a623] transition-colors cursor-pointer">Pan-Seared Salmon</h5>
+                      <h5 className="text-base font-bebas tracking-wide text-white hover:text-[#cc0000] transition-colors cursor-pointer">Pan-Seared Salmon</h5>
                       <p className="text-gray-400 text-[10px] leading-relaxed mt-1">Atlantic salmon fillet, asparagus spears, saffron butter sauce & lemon.</p>
                     </div>
                     <div>
-                      <h5 className="text-base font-bebas tracking-wide text-white hover:text-[#f5a623] transition-colors cursor-pointer">Neapolitan Pepperoni</h5>
+                      <h5 className="text-base font-bebas tracking-wide text-white hover:text-[#cc0000] transition-colors cursor-pointer">Neapolitan Pepperoni</h5>
                       <p className="text-gray-400 text-[10px] leading-relaxed mt-1">San Marzano sauce, fresh mozzarella, spicy pepperoni & fresh basil.</p>
                     </div>
                     <div>
-                      <h5 className="text-base font-bebas tracking-wide text-white hover:text-[#f5a623] transition-colors cursor-pointer">Slow Pork Belly</h5>
+                      <h5 className="text-base font-bebas tracking-wide text-white hover:text-[#cc0000] transition-colors cursor-pointer">Slow Pork Belly</h5>
                       <p className="text-gray-400 text-[10px] leading-relaxed mt-1">Crispy pork belly, honey-glazed carrots, parsnip puree, jus reduction.</p>
                     </div>
                     <div>
-                      <h5 className="text-base font-bebas tracking-wide text-white hover:text-[#f5a623] transition-colors cursor-pointer">Roasted Brick Chicken</h5>
+                      <h5 className="text-base font-bebas tracking-wide text-white hover:text-[#cc0000] transition-colors cursor-pointer">Roasted Brick Chicken</h5>
                       <p className="text-gray-400 text-[10px] leading-relaxed mt-1">Free-range half chicken, garden herbs, roasted heirloom vegetables.</p>
                     </div>
                   </div>
@@ -434,7 +434,7 @@ export default function MenuSection() {
               {/* ---------------- 4. DRINKS MENU ---------------- */}
               <div>
                 <div className="mb-6 flex">
-                  <span className="border border-[#f5a623]/60 bg-black/40 text-[#f5a623] px-6 py-1 rounded-full font-bebas text-xs sm:text-sm tracking-[0.25em] uppercase font-bold">
+                  <span className="border border-[#cc0000]/60 bg-black/40 text-[#cc0000] px-6 py-1 rounded-full font-bebas text-xs sm:text-sm tracking-[0.25em] uppercase font-bold">
                     Drinks Menu
                   </span>
                 </div>
@@ -443,19 +443,19 @@ export default function MenuSection() {
                   {/* Left: Food Items */}
                   <div className="md:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div>
-                      <h5 className="text-base font-bebas tracking-wide text-white hover:text-[#f5a623] transition-colors cursor-pointer">Smoked Rosemary Old Fashioned</h5>
+                      <h5 className="text-base font-bebas tracking-wide text-white hover:text-[#cc0000] transition-colors cursor-pointer">Smoked Rosemary Old Fashioned</h5>
                       <p className="text-gray-400 text-[10px] leading-relaxed mt-1">Premium aged bourbon, angostura bitters, smoked fresh rosemary branch & orange peel.</p>
                     </div>
                     <div>
-                      <h5 className="text-base font-bebas tracking-wide text-white hover:text-[#f5a623] transition-colors cursor-pointer">Spiced Mango Mojito</h5>
+                      <h5 className="text-base font-bebas tracking-wide text-white hover:text-[#cc0000] transition-colors cursor-pointer">Spiced Mango Mojito</h5>
                       <p className="text-gray-400 text-[10px] leading-relaxed mt-1">White rum, fresh garden mint, mango puree, lime juice, sparkling water & pinch of tajin.</p>
                     </div>
                     <div>
-                      <h5 className="text-base font-bebas tracking-wide text-white hover:text-[#f5a623] transition-colors cursor-pointer">Classic Espresso Martini</h5>
+                      <h5 className="text-base font-bebas tracking-wide text-white hover:text-[#cc0000] transition-colors cursor-pointer">Classic Espresso Martini</h5>
                       <p className="text-gray-400 text-[10px] leading-relaxed mt-1">Freshly brewed local espresso, premium vodka, coffee liqueur & roasted coffee beans.</p>
                     </div>
                     <div>
-                      <h5 className="text-base font-bebas tracking-wide text-white hover:text-[#f5a623] transition-colors cursor-pointer">Hibiscus Rose Mocktail</h5>
+                      <h5 className="text-base font-bebas tracking-wide text-white hover:text-[#cc0000] transition-colors cursor-pointer">Hibiscus Rose Mocktail</h5>
                       <p className="text-gray-400 text-[10px] leading-relaxed mt-1">Brewed organic hibiscus tea, rosewater, fresh lime juice, club soda & edible rose petals.</p>
                     </div>
                   </div>
@@ -478,11 +478,11 @@ export default function MenuSection() {
             {/* ---------------- BOTTOM FOOTER BANNER ---------------- */}
             <div className="mt-12 pt-8 border-t border-white/5 relative">
               {/* Curved yellow shape background on the bottom right */}
-              <div className="absolute -bottom-16 -right-16 w-48 h-48 bg-[#f5a623] rounded-tl-[120px] -z-10 shadow-[0_10px_30px_rgba(245,166,35,0.15)]"></div>
+              <div className="absolute -bottom-16 -right-16 w-48 h-48 bg-[#cc0000] rounded-tl-[120px] -z-10 shadow-[0_10px_30px_rgba(204,0,0,0.2)]"></div>
               
               <div className="flex flex-col sm:flex-row items-center justify-between gap-6 relative z-10">
                 {/* Delivery Truck Promo */}
-                <div className="flex items-center gap-3 bg-[#f5a623] text-[#070d12] px-6 py-3 rounded-full font-bold shadow-lg hover:scale-105 transition-all duration-300">
+                <div className="flex items-center gap-3 bg-[#cc0000] text-white px-6 py-3 rounded-full font-bold shadow-lg hover:scale-105 transition-all duration-300">
                   <Truck className="w-5 h-5 stroke-[2.5]" />
                   <div className="flex flex-col text-left">
                     <span className="text-[10px] leading-none uppercase font-bold tracking-wider opacity-90">Free Home Delivery</span>
