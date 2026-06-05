@@ -81,3 +81,14 @@ body {
 .font-heading {
   font-family: "Eagle Horizon", var(--font-montserrat), sans-serif !important;
 }
+
+/* Responsive hero gradient: mobile uses 45% stop, md+ uses 30% */
+.hero-gradient {
+  background: linear-gradient(to right, black 0%, black 45%, white 75%, white 100%);
+}
+
+@media (min-width: 768px) {
+  .hero-gradient {
+    background: linear-gradient(to right, black 0%, black 30%, white 75%, white 100%);
+  }
+}

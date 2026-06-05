@@ -73,11 +73,7 @@ export default function Home() {
         />
 
         <div
-          className={`absolute inset-0 z-10 mix-blend-multiply pointer-events-none transition-opacity duration-1000 ${isVideoEnded ? "opacity-0" : "opacity-100"
-            }`}
-          style={{
-            background: "linear-gradient(to right, black 0%, black 45%, white 75%, white 100%)",
-          }}
+          className={`absolute inset-0 z-10 mix-blend-multiply pointer-events-none transition-opacity duration-1000 ${isVideoEnded ? "opacity-0" : "opacity-100"} hero-gradient`}
         >
           <div className="flex flex-col justify-center h-full px-8 md:px-16 lg:px-32">
             <div className="max-w-2xl">
@@ -86,11 +82,11 @@ export default function Home() {
               </p>
 
               <div className="relative">
-                <div className="absolute  -top-20 left-0">
-                  <h1 className="text-7xl md:text-9xl font-heading leading-none capitalize pr-8">
-                    <span className="text-white block mb-4">The Art</span>
-                    <span className="text-white ml-12">Of </span>
-                    <span className="text-[#cc0000]">Fire</span>
+                <div className="absolute  -top-30 left-0">
+                  <h1 className="text-7xl md:text-[120px] font-heading leading-none capitalize md:mt-10">
+                    <span className="text-white block mb-20">The Art</span>
+                    <span className="text-white ml-7 md:ml-59">Of </span>
+                    <span className="text-white">Fire</span>
                   </h1>
                 </div>
                 <div className="h-[200px] md:h-[280px]"></div>
@@ -114,32 +110,30 @@ export default function Home() {
                 className={`absolute top-0 left-0 transition-opacity duration-1000 ${isVideoEnded ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
                   }`}
               >
-                <h1 className="text-7xl md:text-9xl font-heading leading-none capitalize pr-8">
-                  <span className="text-white block mb-4">The Art</span>
-                  <span className="text-white ml-12">Of </span>
-                  <span className="text-[#cc0000]">Fire</span>
+                <h1 className="text-7xl md:text-[120px] font-heading leading-none capitalize md:mt-10">
+                  <span className="text-white block mb-20">The Art</span>
+                  <span className="text-white ml-7 md:ml-59">Of </span>
+                  <span className="text-[#cc0000]" style={{ WebkitTextStroke: '1px black' }}>Fire</span>
                 </h1>
               </div>
               <div className="h-[200px] md:h-[280px]"></div>
             </div>
 
-            <p
-              className={`text-sm md:text-base italic mt-8 mb-10 max-w-lg text-gray-200 transition-opacity duration-700 ${isVideoEnded ? "opacity-100" : "opacity-0 hero-reveal"
-                }`}
-            >
-              "Mastering the alchemy of wood-fired flames and hand-kneaded tradition since 1994."
-            </p>
+            <div className="mt-16 md:mt-24">
+              <p
+                className={`text-sm md:text-base italic mt-8 mb-10 max-w-lg text-gray-200 transition-all duration-700 ${isVideoEnded ? "translate-y-6 opacity-100" : "translate-y-0 opacity-0"}`}
+              >
+                "Mastering the alchemy of wood-fired flames and hand-kneaded tradition since 1994."
+              </p>
 
-            <div
-              className={`flex flex-wrap gap-8 items-center mt-4 transition-opacity duration-700 ${isVideoEnded ? "opacity-100" : "opacity-0 hero-reveal"
-                }`}
-            >
-              <button className="bg-[#cc0000] hover:bg-red-700 text-white text-xs md:text-sm font-bold py-3.5 px-8 rounded-full transition-colors uppercase tracking-widest">
-                ORDER NOW
-              </button>
-              <button className="text-white text-xs md:text-sm font-bold flex items-center gap-2 hover:text-[#cc0000] transition-colors uppercase tracking-widest">
-                VIEW MORE <span className="text-lg leading-none">&rarr;</span>
-              </button>
+              <div className="flex flex-wrap gap-8 items-center mt-4 opacity-100">
+                <button className="bg-[#cc0000] hover:bg-red-700 text-white text-xs md:text-sm font-bold py-3.5 px-8 rounded-full transition-colors uppercase tracking-widest">
+                  ORDER NOW
+                </button>
+                <button className="text-white text-xs md:text-sm font-bold flex items-center gap-2 hover:text-[#cc0000] transition-colors uppercase tracking-widest">
+                  VIEW MORE <span className="text-lg leading-none">&rarr;</span>
+                </button>
+              </div>
             </div>
           </div>
         </div>
