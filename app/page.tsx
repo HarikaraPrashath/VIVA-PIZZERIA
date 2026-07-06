@@ -83,7 +83,7 @@ export default function Home() {
 
               <div className="relative">
                 <div className="absolute  -top-30 left-0">
-                  <h1 className="text-7xl md:text-[120px] font-heading leading-none capitalize md:mt-10">
+                  <h1 className="text-7xl md:text-[120px] font-heading leading-none capitalize md:mt-10 w-[500] md:w-[860px]">
                     <span className="text-white block mb-20">The Art</span>
                     <span className="text-white ml-7 md:ml-59">Of </span>
                     <span className="text-white">Fire</span>
@@ -110,9 +110,9 @@ export default function Home() {
                 className={`absolute top-0 left-0 transition-opacity duration-1000 ${isVideoEnded ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
                   }`}
               >
-                <h1 className="text-7xl md:text-[120px] font-heading leading-none capitalize md:mt-10">
+                <h1 className="text-[60px] md:text-[100px] font-heading leading-none capitalize md:mt-10 w-[500] md:w-[860px]">
                   <span className="text-white block mb-20">The Art</span>
-                  <span className="text-white ml-7 md:ml-59">Of </span>
+                  <span className="text-white ml-7 md:ml-59 ">Of </span>
                   <span className="text-[#cc0000]" style={{ WebkitTextStroke: '1px black' }}>Fire</span>
                 </h1>
               </div>

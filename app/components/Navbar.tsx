@@ -58,7 +58,7 @@ export default function Navbar({ isAnimatedIn }: NavbarProps) {
         {/* Right Area: CTA & Hamburger */}
         <div className="flex items-center gap-4 sm:gap-6">
           {/* Super Animated CTA Button */}
-          <button className="relative overflow-hidden group bg-transparent border border-[#cc0000] text-white font-bold rounded-full uppercase tracking-widest transition-all duration-500 hover:scale-105 hover:shadow-[0_0_20px_rgba(204,0,0,0.5)] 
+          <Link href="/reserve" className="relative overflow-hidden group bg-transparent border border-[#cc0000] text-white font-bold rounded-full uppercase tracking-widest transition-all duration-500 hover:scale-105 hover:shadow-[0_0_20px_rgba(204,0,0,0.5)] 
             py-1.5 px-5 text-[10px] leading-snug text-center flex flex-col items-center justify-center
             md:py-3 md:px-8 md:text-sm md:block md:leading-normal"
           >
@@ -72,7 +72,7 @@ export default function Navbar({ isAnimatedIn }: NavbarProps) {
             <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/40 to-transparent group-hover:animate-shimmer z-0"></div>
             {/* Background fill */}
             <div className="absolute inset-0 bg-[#cc0000] scale-x-0 origin-left transition-transform duration-500 ease-out group-hover:scale-x-100 z-0"></div>
-          </button>
+          </Link>
 
           {/* Hamburger Icon */}
           <button
